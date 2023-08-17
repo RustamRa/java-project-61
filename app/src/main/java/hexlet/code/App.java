@@ -13,7 +13,8 @@ public class App {
 
         int choiceMin = 1;
         int choiceMax = 6;
-        int choiceExit = 0;
+        String choiceExit = "0";
+        //int choiceExit = 0;
 
         //int userChoice = choiceApp();
         Scanner scanner = new Scanner(System.in);
@@ -30,35 +31,39 @@ public class App {
 
         String userChoiceStr = scanner.next();
 
-        int userChoice = 0;
-
-        try {
-            userChoice = Integer.parseInt(userChoiceStr);
-        } catch (NumberFormatException e) {
-            System.err.println("Неправильный формат строки!");
-        }
+//        int userChoice = 0;
+//
+//        try {
+//            userChoice = Integer.parseInt(userChoiceStr);
+//        } catch (NumberFormatException e) {
+//            System.err.println("Неправильный формат строки!");
+//        }
 
         // Если пользователь выбрал "выйтм", то выход
-        if (choiceExit == userChoice) {
+        if (userChoiceStr.equalsIgnoreCase(choiceExit)) {
             return;
         }
+//        if (choiceExit == userChoice) {
+//            return;
+//        }
 
         // Если пользователь выбрал несуществующий номер,
         // то сообщаем об этом и выходим
-        if (userChoice < choiceMin || userChoice > choiceMax) {
-            System.out.println("You have selected an invalid number!");
-            return;
-        }
+//        if (userChoice < choiceMin || userChoice > choiceMax) {
+//            System.out.println("You have selected an invalid number!");
+//            return;
+//        }
         // Приветствуем пользователя и уточняем его имя
         System.out.println("Welcome to the Brain Games!");
         String userName = Cli.greetings();
         // Делаем дальнейший выбор
-        switch (userChoice) {
-            case 2 -> Engine.engine(new Even(), userName);
-            case 3 -> Engine.engine(new Calc(), userName);
-            case 4 -> Engine.engine(new Gcd(), userName);
-            case 5 -> Engine.engine(new Progression(), userName);
-            case 6 -> Engine.engine(new Prime(), userName);
+        switch (userChoiceStr) {
+//        switch (userChoice) {
+            case "2" -> Engine.engine(new Even(), userName);
+            case "3" -> Engine.engine(new Calc(), userName);
+            case "4" -> Engine.engine(new Gcd(), userName);
+            case "5" -> Engine.engine(new Progression(), userName);
+            case "6" -> Engine.engine(new Prime(), userName);
             default -> {
             }
         }
