@@ -42,6 +42,10 @@ public class Progression implements Game {
 
         // Преобразуем массив в одну строку
         questionContent = Arrays.toString(numbers);
+
+        // Удаляем запятые из полученной строки
+        questionContent = questionContent.replaceAll(",", "");
+
         // Удаляем первую и последнюю скобку от преобразования массива в число
         int firstPosition = 1;
         int lastPosition = questionContent.length() - 1;
