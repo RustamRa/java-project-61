@@ -7,7 +7,7 @@ import hexlet.code.Util;
 
 public class Progression implements Game {
 
-    public String questionText = "What number is missing in the progression?";
+    private String questionText = "What number is missing in the progression?";
 
     public final GameData generate() {
 
