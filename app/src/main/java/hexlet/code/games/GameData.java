@@ -4,10 +4,10 @@ public final class GameData {
     private String questionContent;
     private String correctAnswer;
 
-    public GameData(String questionContent, String correctAnswer) {
+    public GameData(String param1, String param2) {
         //this.questionText = questionText;
-        this.questionContent = questionContent;
-        this.correctAnswer = correctAnswer;
+        this.questionContent = param1;
+        this.correctAnswer = param2;
     }
 
     public String getQuestionContent() {

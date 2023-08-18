@@ -25,14 +25,17 @@ public class Calc implements Game {
         int numberTwo = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
         int actionExpression = Util.randomNumberInRange(rangeActionMax, rangeActionMin);
 
+        final int actionSubtraction = 2;
+        final int actionMultiplication = 3;
+
         switch (actionExpression) {
             // Вычитание
-            case 2 -> {
+            case actionSubtraction -> {
                 actionExpressionStr = " - ";
                 correctAnswerInt = numberOne - numberTwo;
             }
             // Умножение
-            case 3 -> {
+            case actionMultiplication -> {
                 actionExpressionStr = " * ";
                 correctAnswerInt = numberOne * numberTwo;
             }
