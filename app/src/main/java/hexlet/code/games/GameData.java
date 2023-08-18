@@ -1,8 +1,8 @@
 package hexlet.code.games;
 
 public final class GameData {
-    private String questionContent;
-    private String correctAnswer;
+    private final String questionContent;
+    private final String correctAnswer;
 
     public GameData(String param1, String param2) {
         //this.questionText = questionText;
