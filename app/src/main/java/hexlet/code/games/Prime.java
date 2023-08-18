@@ -10,10 +10,10 @@ public class Prime implements Game {
 
     }
 
-    public GameData generate() {
+    public final GameData generate() {
 
-        int rangeNumberMax = 100;
-        int rangeNumberMin = 1;
+        final int rangeNumberMax = 100;
+        final int rangeNumberMin = 1;
 
         int numberOne = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
 
@@ -23,7 +23,7 @@ public class Prime implements Game {
         return new GameData(questionContent, correctAnswer);
     }
 
-    public String getQuestionText() {
+    public final String getQuestionText() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 

@@ -11,17 +11,17 @@ public class Progression implements Game {
 
     }
 
-    public GameData generate() {
+    public final GameData generate() {
 
         String correctAnswer;
         String questionContent;
 
-        int rangeNumberMax = 20;
-        int rangeNumberMin = 1;
-        int rangeStepMax = 7;
-        int rangeStepMin = 2;
-        int rangeArrayMax = 6;
-        int rangeArrayMin = 5;
+        final int rangeNumberMax = 20;
+        final int rangeNumberMin = 1;
+        final int rangeStepMax = 7;
+        final int rangeStepMin = 2;
+        final int rangeArrayMax = 6;
+        final int rangeArrayMin = 5;
 
         // Определяем параметры Прогрессии и массива
         int numberOne = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
@@ -29,7 +29,7 @@ public class Progression implements Game {
         int arraySize = Util.randomNumberInRange(rangeArrayMax, rangeArrayMin);
 
         // Определяем позицию спрятанного элемента
-        int rangePositionMin = 0;
+        final int rangePositionMin = 0;
 
         int positionHide = Util.randomNumberInRange(arraySize, rangePositionMin);
 
@@ -47,14 +47,14 @@ public class Progression implements Game {
         questionContent = questionContent.replaceAll(",", "");
 
         // Удаляем первую и последнюю скобку от преобразования массива в число
-        int firstPosition = 1;
+        final int firstPosition = 1;
         int lastPosition = questionContent.length() - 1;
         questionContent = questionContent.substring(firstPosition, lastPosition);
 
         return new GameData(questionContent, correctAnswer);
     }
 
-    public String getQuestionText() {
+    public final String getQuestionText() {
         return "What number is missing in the progression?";
     }
 
@@ -67,4 +67,3 @@ public class Progression implements Game {
         return values;
     }
 }
-

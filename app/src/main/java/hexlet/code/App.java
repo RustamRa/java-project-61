@@ -11,8 +11,8 @@ public class App {
 
     public static void main(String[] args) {
 
-        int choiceMin = 1;
-        int choiceMax = 6;
+        //int choiceMin = 1;
+        //int choiceMax = 6;
         String choiceExit = "0";
         //int choiceExit = 0;
 

@@ -10,10 +10,10 @@ public class Gcd implements Game {
 
     }
 
-    public GameData generate() {
+    public final GameData generate() {
 
-        int rangeNumberMax = 100;
-        int rangeNumberMin = 1;
+        final int rangeNumberMax = 100;
+        final int rangeNumberMin = 1;
 
         int numberOne = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
         int numberTwo = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
@@ -26,7 +26,7 @@ public class Gcd implements Game {
         return new GameData(questionContent, correctAnswer);
     }
 
-    public String getQuestionText() {
+    public final String getQuestionText() {
         return "Find the greatest common divisor of given numbers.";
     }
 

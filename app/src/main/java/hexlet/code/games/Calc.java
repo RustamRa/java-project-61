@@ -8,7 +8,7 @@ public class Calc implements Game {
 
     }
 
-    public GameData generate() {
+    public final GameData generate() {
 
         String correctAnswer;
         String questionContent;
@@ -16,10 +16,10 @@ public class Calc implements Game {
         int correctAnswerInt;
         String actionExpressionStr;
 
-        int rangeNumberMax = 10;
-        int rangeNumberMin = 1;
-        int rangeActionMax = 3;
-        int rangeActionMin = 1;
+        final int rangeNumberMax = 10;
+        final int rangeNumberMin = 1;
+        final int rangeActionMax = 3;
+        final int rangeActionMin = 1;
 
         int numberOne = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
         int numberTwo = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
@@ -49,7 +49,7 @@ public class Calc implements Game {
         return new GameData(questionContent, correctAnswer);
     }
 
-    public String getQuestionText() {
+    public final String getQuestionText() {
         return "What is the result of the expression?";
     }
 

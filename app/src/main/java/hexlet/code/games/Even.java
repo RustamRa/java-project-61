@@ -10,13 +10,13 @@ public class Even implements Game {
 
     }
 
-    public GameData generate() {
+    public final GameData generate() {
 
         String correctAnswer;
         String questionContent;
 
-        int rangeNumberMax = 100;
-        int rangeNumberMin = 1;
+        final int rangeNumberMax = 100;
+        final int rangeNumberMin = 1;
 
         int numberOne = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
 
@@ -26,7 +26,7 @@ public class Even implements Game {
         return new GameData(questionContent, correctAnswer);
     }
 
-    public String getQuestionText() {
+    public final String getQuestionText() {
         return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
 

@@ -9,7 +9,7 @@ public class Engine {
     public static void engine(Game question, String userName) {
 
 //      Количество правильных ответов
-        int attemptsNumber = 3;
+        final int attemptsNumber = 3;
 
         Scanner scanner = new Scanner(System.in);
 
