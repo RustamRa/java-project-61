@@ -11,12 +11,8 @@ public class App {
 
     public static void main(String[] args) {
 
-        //int choiceMin = 1;
-        //int choiceMax = 6;
         String choiceExit = "0";
-        //int choiceExit = 0;
 
-        //int userChoice = choiceApp();
         Scanner scanner = new Scanner(System.in);
 
         // Выбор действия пользователя
@@ -43,22 +39,12 @@ public class App {
         if (userChoiceStr.equalsIgnoreCase(choiceExit)) {
             return;
         }
-//        if (choiceExit == userChoice) {
-//            return;
-//        }
 
-        // Если пользователь выбрал несуществующий номер,
-        // то сообщаем об этом и выходим
-//        if (userChoice < choiceMin || userChoice > choiceMax) {
-//            System.out.println("You have selected an invalid number!");
-//            return;
-//        }
         // Приветствуем пользователя и уточняем его имя
         System.out.println("Welcome to the Brain Games!");
         String userName = Cli.greetings();
         // Делаем дальнейший выбор
         switch (userChoiceStr) {
-//        switch (userChoice) {
             case "2" -> Engine.engine(new Even(), userName);
             case "3" -> Engine.engine(new Calc(), userName);
             case "4" -> Engine.engine(new Gcd(), userName);

@@ -1,7 +1,5 @@
 package hexlet.code.games;
 
-//import hexlet.code.MathR;
-
 import hexlet.code.Util;
 
 public class Gcd implements Game {
