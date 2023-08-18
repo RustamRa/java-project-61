@@ -4,9 +4,7 @@ import hexlet.code.Util;
 
 public class Prime implements Game {
 
-    public Prime() {
-
-    }
+    private String questionText = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public final GameData generate() {
 
@@ -22,7 +20,7 @@ public class Prime implements Game {
     }
 
     public final String getQuestionText() {
-        return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        return this.questionText;
     }
 
     private boolean isSimple(Integer number) {

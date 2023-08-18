@@ -6,9 +6,7 @@ import hexlet.code.Util;
 
 public class Even implements Game {
 
-    public Even() {
-
-    }
+    private String questionText = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public final GameData generate() {
 
@@ -27,7 +25,7 @@ public class Even implements Game {
     }
 
     public final String getQuestionText() {
-        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
+        return this.questionText;
     }
 
     private boolean isEven(int number) {

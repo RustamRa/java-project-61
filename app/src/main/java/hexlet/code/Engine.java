@@ -6,47 +6,31 @@ import hexlet.code.games.Game;
 import java.util.Scanner;
 
 public class Engine {
-    public static void engine(Game question, String userName) {
 
-//      Количество правильных ответов
-        final int attemptsNumber = 3;
+    private static final int ATTEMPTS_NUMBER = 3;
 
+    public static void engine(Game game) {
+
+        System.out.println("Welcome to the Brain Games!");
         Scanner scanner = new Scanner(System.in);
+        System.out.print("May I have your name? ");
+        String userName = scanner.next();
+        System.out.println("Hello, " + userName + "!");
 
-        // Переменные результата
-        var userAnswer = "";
-        var gameResult = "win";
-
-        //Выводим общий текст вопроса игры
-        System.out.println(question.getQuestionText());
-
-        int questionNumber = 1; // Cчётчик выполненных итераций
-        do {
-            // Создаем объект игры и генерируем вопрос
-            GameData game = question.generate();
-
-            // Выводим вопрос и запрашиваем ответ
-            System.out.println("Question: " + game.getQuestionContent());
+        System.out.println(game.getQuestionText());
+        for (var i = 1; i <= ATTEMPTS_NUMBER; i++) {
+            GameData gameData = game.generate();
+            System.out.println("Question: " + gameData.getQuestionContent());
             System.out.print("Your answer: ");
-
-            userAnswer = scanner.next();
-
-            // Обработка ответа пользователя
-            if (userAnswer.equalsIgnoreCase(game.getCorrectAnswer())) {
-                System.out.println("Correct!");
-                questionNumber++;
-            } else {
+            var userAnswer = scanner.next();
+            if (!userAnswer.equalsIgnoreCase(gameData.getCorrectAnswer())) {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. "
-                        + "Correct answer was '" + game.getCorrectAnswer() + "'.");
-                gameResult = "lose";
+                        + "Correct answer was '" + gameData.getCorrectAnswer() + "'.");
+                System.out.println("Let's try again, " + userName + "!");
+                return;
             }
-
-        } while (questionNumber <= attemptsNumber && gameResult.equals("win"));
-
-        // Результат игры
-        System.out.println((gameResult.equalsIgnoreCase("win")
-                ? "Congratulations, "
-                : "Let's try again, "
-                ) + userName + "!");
+            System.out.println("Correct!");
+        }
+        System.out.println("Congratulations, " + userName + "!");
     }
 }

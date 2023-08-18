@@ -4,9 +4,7 @@ import hexlet.code.Util;
 
 public class Gcd implements Game {
 
-    public Gcd() {
-
-    }
+    public String questionText = "Find the greatest common divisor of given numbers.";
 
     public final GameData generate() {
 
@@ -25,7 +23,7 @@ public class Gcd implements Game {
     }
 
     public final String getQuestionText() {
-        return "Find the greatest common divisor of given numbers.";
+        return this.questionText;
     }
 
     private int gsd(int a, int b) {
