@@ -7,16 +7,15 @@ public class Calc implements Game {
     private String questionText = "What is the result of the expression?";
 
     public final GameData generate() {
-
         final int rangeNumberMax = 10;
         final int rangeNumberMin = 1;
         final int rangeActionMax = 3;
         final int rangeActionMin = 1;
-        int numberOne = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
-        int numberTwo = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
-        int actionExpression = Util.randomNumberInRange(rangeActionMax, rangeActionMin);
+        int numberOne = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
+        int numberTwo = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
+        int actionExpression = Util.getRandomNumberInRange(rangeActionMax, rangeActionMin);
 
-        String[] calculation = exacuteAction(actionExpression, numberOne, numberTwo);
+        String[] calculation = executeAction(actionExpression, numberOne, numberTwo);
         String questionContent = (numberOne + calculation[0] + numberTwo) .trim();
         String correctAnswer = calculation[1];
         return new GameData(questionContent, correctAnswer);
@@ -26,7 +25,7 @@ public class Calc implements Game {
         return this.questionText;
     }
 
-    private String[] exacuteAction(int actionExpression, int numberOne, int numberTwo) {
+    private String[] executeAction(int actionExpression, int numberOne, int numberTwo) {
         String[] result = new String[2];
         final int actionSubtraction = 2;
         final int actionMultiplication = 3;

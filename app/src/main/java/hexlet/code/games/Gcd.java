@@ -7,18 +7,14 @@ public class Gcd implements Game {
     private String questionText = "Find the greatest common divisor of given numbers.";
 
     public final GameData generate() {
-
         final int rangeNumberMax = 100;
         final int rangeNumberMin = 1;
-
-        int numberOne = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
-        int numberTwo = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
-
-        int correctAnswerInt = gsd(numberOne, numberTwo);
+        int numberOne = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
+        int numberTwo = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
+        int correctAnswerInt = calculateGCD(numberOne, numberTwo);
 
         String correctAnswer = Integer.toString(correctAnswerInt) .trim();
         String questionContent = (numberOne + " " + numberTwo) .trim();
-
         return new GameData(questionContent, correctAnswer);
     }
 
@@ -26,7 +22,7 @@ public class Gcd implements Game {
         return this.questionText;
     }
 
-    private int gsd(int a, int b) {
+    private int calculateGCD(int a, int b) {
         while (a != b) {
             if (a > b) {
                 a = a - b;

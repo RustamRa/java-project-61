@@ -26,12 +26,12 @@ public class App {
             case "0" -> {
                 return;
             }
-            case "1" -> Cli.greetings();
-            case "2" -> Engine.engine(new Even());
-            case "3" -> Engine.engine(new Calc());
-            case "4" -> Engine.engine(new Gcd());
-            case "5" -> Engine.engine(new Progression());
-            case "6" -> Engine.engine(new Prime());
+            case "1" -> Cli.greet();
+            case "2" -> Engine.play(new Even());
+            case "3" -> Engine.play(new Calc());
+            case "4" -> Engine.play(new Gcd());
+            case "5" -> Engine.play(new Progression());
+            case "6" -> Engine.play(new Prime());
             default -> System.out.println("Invalid input string format!");
         }
     }

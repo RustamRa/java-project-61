@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Cli {
 
-    public static void greetings() {
+    public static void greet() {
         System.out.println("Welcome to the Brain Games!");
         Scanner scanner = new Scanner(System.in);
         System.out.print("May I have your name? ");

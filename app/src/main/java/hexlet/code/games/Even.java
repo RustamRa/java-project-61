@@ -9,18 +9,12 @@ public class Even implements Game {
     private String questionText = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public final GameData generate() {
-
-        String correctAnswer;
-        String questionContent;
-
         final int rangeNumberMax = 100;
         final int rangeNumberMin = 1;
+        int numberOne = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
 
-        int numberOne = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
-
-        correctAnswer =  isEven(numberOne) ? "yes" : "no";
-        questionContent = Integer.toString(numberOne) .trim();
-
+        String correctAnswer =  isEven(numberOne) ? "yes" : "no";
+        String questionContent = Integer.toString(numberOne) .trim();
         return new GameData(questionContent, correctAnswer);
     }
 

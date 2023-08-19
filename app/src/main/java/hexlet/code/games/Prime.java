@@ -7,15 +7,12 @@ public class Prime implements Game {
     private String questionText = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public final GameData generate() {
-
         final int rangeNumberMax = 100;
         final int rangeNumberMin = 1;
-
-        int numberOne = Util.randomNumberInRange(rangeNumberMax, rangeNumberMin);
+        int numberOne = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
 
         String correctAnswer = isSimple(numberOne) ? "yes" : "no";
         String questionContent = Integer.toString(numberOne) .trim();
-
         return new GameData(questionContent, correctAnswer);
     }
 

@@ -9,7 +9,7 @@ public class Engine {
 
     private static final int ATTEMPTS_NUMBER = 3;
 
-    public static void engine(Game game) {
+    public static void play(Game game) {
 
         System.out.println("Welcome to the Brain Games!");
         Scanner scanner = new Scanner(System.in);
