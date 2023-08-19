@@ -17,5 +17,4 @@ public final class GameData {
     public String getCorrectAnswer() {
         return this.correctAnswer;
     }
-
 }

@@ -48,5 +48,4 @@ public class Calc implements Game {
         }
         return result;
     }
-
 }

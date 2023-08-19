@@ -1,9 +1,6 @@
 package hexlet.code.games;
 
-//import hexlet.code.MathR;
 import hexlet.code.Util;
-
-//import java.util.Arrays;
 
 public class Progression implements Game {
 
@@ -34,7 +31,6 @@ public class Progression implements Game {
     }
 
     private String[] calculateArithmeticProgressionString(int numberOne, int arrayStep, int arraySize) {
-        // Создаем пустой массив с необходимым размером
         String[] values = new String[arraySize];
         for (var i = 0; i < values.length; i++) {
             values[i] = Integer.toString(numberOne + arrayStep * i);

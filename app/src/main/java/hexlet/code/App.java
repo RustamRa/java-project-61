@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
-
         System.out.println("""
         1 - Greet
         2 - Even

@@ -1,7 +1,5 @@
 package hexlet.code.games;
 
-//import hexlet.code.MathR;
-
 import hexlet.code.Util;
 
 public class Even implements Game {
@@ -23,7 +21,6 @@ public class Even implements Game {
     }
 
     private boolean isEven(int number) {
-        //boolean result = ((number / 2) * 2) == number ? true : false;
         return ((number / 2) * 2) == number;
     }
 }
