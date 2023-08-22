@@ -19,12 +19,12 @@ public class Engine {
         System.out.println(game.getRules());
         for (var i = 1; i <= ATTEMPTS_NUMBER; i++) {
             GameData gameData = game.generateGameData();
-            System.out.println("Question: " + gameData.getQuestionContent());
+            System.out.println("Question: " + gameData.getQuestion());
             System.out.print("Your answer: ");
             var userAnswer = scanner.next();
-            if (!userAnswer.equalsIgnoreCase(gameData.getCorrectAnswer())) {
+            if (!userAnswer.equalsIgnoreCase(gameData.getAnswer())) {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. "
-                        + "Correct answer was '" + gameData.getCorrectAnswer() + "'.");
+                        + "Correct answer was '" + gameData.getAnswer() + "'.");
                 System.out.println("Let's try again, " + userName + "!");
                 return;
             }

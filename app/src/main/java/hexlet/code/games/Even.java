@@ -12,9 +12,9 @@ public class Even implements Game {
 
         int numberOne = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
 
-        String correctAnswer =  isEven(numberOne) ? "yes" : "no";
-        String questionContent = Integer.toString(numberOne) .trim();
-        return new GameData(questionContent, correctAnswer);
+        String answer =  isEven(numberOne) ? "yes" : "no";
+        String question = Integer.toString(numberOne) .trim();
+        return new GameData(question, answer);
     }
 
     public final String getRules() {

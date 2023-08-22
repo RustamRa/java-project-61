@@ -20,10 +20,10 @@ public class Progression implements Game {
         int positionHide = Util.getRandomNumberInRange(arraySize, rangePositionMin);
 
         String[] numbers = calculateArithmeticProgression(numberOne, arrayStep, arraySize);
-        String correctAnswer = numbers[positionHide];
+        String answer = numbers[positionHide];
         numbers[positionHide] = "..";
-        String questionContent = String.join(" ", numbers);
-        return new GameData(questionContent, correctAnswer);
+        String question = String.join(" ", numbers);
+        return new GameData(question, answer);
     }
 
     public final String getRules() {

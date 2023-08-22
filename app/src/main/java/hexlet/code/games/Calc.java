@@ -16,9 +16,9 @@ public class Calc implements Game {
         int actionExpression = Util.getRandomNumberInRange(rangeActionMax, rangeActionMin);
 
         String[] calculation = executeAction(actionExpression, numberOne, numberTwo);
-        String questionContent = (numberOne + calculation[0] + numberTwo) .trim();
-        String correctAnswer = calculation[1];
-        return new GameData(questionContent, correctAnswer);
+        String question = (numberOne + calculation[0] + numberTwo) .trim();
+        String answer = calculation[1];
+        return new GameData(question, answer);
     }
 
     public final String getRules() {

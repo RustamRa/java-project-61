@@ -11,9 +11,9 @@ public class Prime implements Game {
     public final GameData generateGameData() {
         int numberOne = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
 
-        String correctAnswer = isPrime(numberOne) ? "yes" : "no";
-        String questionContent = Integer.toString(numberOne) .trim();
-        return new GameData(questionContent, correctAnswer);
+        String answer = isPrime(numberOne) ? "yes" : "no";
+        String question = Integer.toString(numberOne) .trim();
+        return new GameData(question, answer);
     }
 
     public final String getRules() {

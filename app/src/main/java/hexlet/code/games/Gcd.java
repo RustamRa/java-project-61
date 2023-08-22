@@ -13,9 +13,9 @@ public class Gcd implements Game {
         int numberTwo = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
         int correctAnswerInt = calculateGCD(numberOne, numberTwo);
 
-        String correctAnswer = Integer.toString(correctAnswerInt) .trim();
-        String questionContent = (numberOne + " " + numberTwo) .trim();
-        return new GameData(questionContent, correctAnswer);
+        String answer = Integer.toString(correctAnswerInt) .trim();
+        String question = (numberOne + " " + numberTwo) .trim();
+        return new GameData(question, answer);
     }
 
     public final String getRules() {
