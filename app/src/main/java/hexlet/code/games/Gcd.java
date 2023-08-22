@@ -4,11 +4,11 @@ import hexlet.code.Util;
 
 public class Gcd implements Game {
 
-    private String questionText = "Find the greatest common divisor of given numbers.";
+    private final String questionText = "Find the greatest common divisor of given numbers.";
+    private final int rangeNumberMax = 100;
+    private final int rangeNumberMin = 1;
 
-    public final GameData generate() {
-        final int rangeNumberMax = 100;
-        final int rangeNumberMin = 1;
+    public final GameData generateGameData() {
         int numberOne = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
         int numberTwo = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
         int correctAnswerInt = calculateGCD(numberOne, numberTwo);
@@ -18,7 +18,7 @@ public class Gcd implements Game {
         return new GameData(questionContent, correctAnswer);
     }
 
-    public final String getQuestionText() {
+    public final String getRules() {
         return this.questionText;
     }
 

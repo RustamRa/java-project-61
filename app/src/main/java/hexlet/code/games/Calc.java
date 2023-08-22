@@ -4,13 +4,13 @@ import hexlet.code.Util;
 
 public class Calc implements Game {
 
-    private String questionText = "What is the result of the expression?";
+    private final String questionText = "What is the result of the expression?";
+    private final int rangeNumberMax = 10;
+    private final int rangeNumberMin = 1;
+    private final int rangeActionMax = 3;
+    private final int rangeActionMin = 1;
 
-    public final GameData generate() {
-        final int rangeNumberMax = 10;
-        final int rangeNumberMin = 1;
-        final int rangeActionMax = 3;
-        final int rangeActionMin = 1;
+    public final GameData generateGameData() {
         int numberOne = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
         int numberTwo = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
         int actionExpression = Util.getRandomNumberInRange(rangeActionMax, rangeActionMin);
@@ -21,7 +21,7 @@ public class Calc implements Game {
         return new GameData(questionContent, correctAnswer);
     }
 
-    public final String getQuestionText() {
+    public final String getRules() {
         return this.questionText;
     }
 

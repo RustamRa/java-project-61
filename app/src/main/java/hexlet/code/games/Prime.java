@@ -4,23 +4,23 @@ import hexlet.code.Util;
 
 public class Prime implements Game {
 
-    private String questionText = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private final String questionText = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private final int rangeNumberMax = 100;
+    private final int rangeNumberMin = 1;
 
-    public final GameData generate() {
-        final int rangeNumberMax = 100;
-        final int rangeNumberMin = 1;
+    public final GameData generateGameData() {
         int numberOne = Util.getRandomNumberInRange(rangeNumberMax, rangeNumberMin);
 
-        String correctAnswer = isSimple(numberOne) ? "yes" : "no";
+        String correctAnswer = isPrime(numberOne) ? "yes" : "no";
         String questionContent = Integer.toString(numberOne) .trim();
         return new GameData(questionContent, correctAnswer);
     }
 
-    public final String getQuestionText() {
+    public final String getRules() {
         return this.questionText;
     }
 
-    private boolean isSimple(Integer number) {
+    private boolean isPrime(Integer number) {
         if (number < 2) {
             return false;
         }

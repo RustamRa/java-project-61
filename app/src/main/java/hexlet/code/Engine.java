@@ -16,9 +16,9 @@ public class Engine {
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
 
-        System.out.println(game.getQuestionText());
+        System.out.println(game.getRules());
         for (var i = 1; i <= ATTEMPTS_NUMBER; i++) {
-            GameData gameData = game.generate();
+            GameData gameData = game.generateGameData();
             System.out.println("Question: " + gameData.getQuestionContent());
             System.out.print("Your answer: ");
             var userAnswer = scanner.next();

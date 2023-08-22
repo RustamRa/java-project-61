@@ -1,17 +1,17 @@
 package hexlet.code.games;
 
 public final class GameData {
-    private final String questionContent;
+    private final String question;
     private final String correctAnswer;
 
     public GameData(String param1, String param2) {
         //this.questionText = questionText;
-        this.questionContent = param1;
+        this.question = param1;
         this.correctAnswer = param2;
     }
 
     public String getQuestionContent() {
-        return this.questionContent;
+        return this.question;
     }
 
     public String getCorrectAnswer() {

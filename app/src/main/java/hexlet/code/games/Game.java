@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
 public interface Game {
-    GameData generate();
-    String getQuestionText();
+    GameData generateGameData();
+    String getRules();
 }
